@@ -1,0 +1,71 @@
+.Flowers__Love {
+    background-color: #fae2bf;
+    color: #000;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Flower', sans-serif;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.contenedor-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre el GIF y el audio */
+}
+
+.f {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+audio {
+    width: 100%; /* Ajusta el ancho del reproductor de audio */
+    max-width: 400px; /* Limita el ancho máximo */
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Espacio encima del botón */
+}
+
+button:hover {
+    background-color: #ff4a3d;
+}
+
+.mensaje-oculto {
+    display: none; /* Oculta el mensaje inicialmente */
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff3e6;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ffccb3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limita el ancho del mensaje */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.mensaje-visible {
+    display: block; /* Muestra el mensaje */
+}

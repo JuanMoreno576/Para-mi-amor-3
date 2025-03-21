@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Para mi amor hermosa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        /* Estilos para el lightbox */
+        #lightbox {
+            display: none; /* Oculta el lightbox por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="Flowers__Love">
+        <h1>❤️ Para la más hermosa del mundo ❤️</h1>
+
+        <!-- Contenedor para el GIF y el audio -->
+        <div class="contenedor-centrado">
+            <!-- GIF -->
+            <img class="f" src="flores.gif" alt="Gif de flores" onclick="openLightbox('flores.gif')">
+
+            <!-- Reproductor de audio -->
+            <audio controls autoplay loop>
+                <source src="amorcito.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </div>
+
+        <!-- Botón para mostrar el mensaje -->
+        <button onclick="mostrarMensaje()">💌 Carta para mi amor</button>
+
+        <!-- Párrafo oculto con el mensaje -->
+        <p id="mensaje" class="mensaje-oculto">
+            Hola amor,<br><br>
+            Espero te encuentres bien y estés bien.<br><br>
+            Quiero escribirte o, más bien, enviarte un mensaje por este medio, ya que es algo nuevo y no sé si te gustará, pero me gustaría al menos sorprenderte con esto y que veas que seas feliz.<br><br>
+            Mi amor, quiero que sepas que te amo, que eres la mejor y que somos una pareja que pelea mucho, nos amamos mucho y, sobre todo, somos muy felices juntos y queremos estar siempre con el otro. Quiero decirte, amor, que estoy realmente feliz de estar contigo, pasar las noches juntos durmiendo, así como también esos minutos en los que voy unos piquitos y me voy. Lo digo para que veas que, para mí, cada año, mes, día, hora y segundo a tu lado es algo que me hace muy feliz y deseo poder seguir contigo más tiempo. Puede que a veces no nos entendamos y peleemos, pero eso no quita que nos amamos y que sabemos que no estamos bien o no nos sentimos bien cuando el otro está mal. Mi amor, quiero que sepas que te amo mucho, que eres muy linda a mis ojos y que, pese a todo lo que pasamos y pasaremos, deseo que sigamos juntos, como al inicio, enfrentando todo juntos y saliendo juntos.<br><br>
+            Atentamente,<br>
+            Juan David Moreno Espitia<br>
+            Alias<br>
+            El amor eterno de tu vida...
+        </p>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        // Función para abrir el lightbox
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = 'flex';
+        }
+
+        // Función para cerrar el lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
+        // Función para mostrar el mensaje
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensaje');
+            mensaje.classList.toggle('mensaje-visible'); // Alternar la visibilidad
+        }
+    </script>
+</body>
+</html>
